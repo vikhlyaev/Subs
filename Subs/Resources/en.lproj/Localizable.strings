@@ -8,3 +8,8 @@
 
 "tabBar.mySubscribesText"="My subscribes";
 "tabBar.settingsText"="Settings";
+"mySubscribes.sortBarButtonText"="Sorting";
+"mySubscribes.addBarButtonText"="Add";
+"mySubscribes.searchPlaceholderText"="Search";
+"subscribeCell.paymentLabelText"="Payment";
+"subscribeCell.reminderLabelText"="Reminder";

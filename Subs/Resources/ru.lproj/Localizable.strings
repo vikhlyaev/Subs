@@ -8,3 +8,8 @@
 
 "tabBar.mySubscribesText"="Мои подписки";
 "tabBar.settingsText"="Настройки";
+"mySubscribes.sortBarButtonText"="Сортировка";
+"mySubscribes.addBarButtonText"="Добавить";
+"mySubscribes.searchPlaceholderText"="Поиск";
+"subscribeCell.paymentLabelText"="Оплата";
+"subscribeCell.reminderLabelText"="Напоминание";
