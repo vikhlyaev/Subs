@@ -13,5 +13,22 @@ enum Reminder: CaseIterable {
     case threeDay
     case oneWeek
     case twoWeek
-    case without
+    case none
+    
+    var title: String {
+        switch self {
+        case .dayOfPayment:
+            return Localization.reminderDayOfPayment
+        case .oneDay:
+            return Localization.reminderOneDay
+        case .threeDay:
+            return Localization.reminderThreeDay
+        case .oneWeek:
+            return Localization.reminderOneWeek
+        case .twoWeek:
+            return Localization.reminderTwoWeek
+        case .none:
+            return Localization.reminderNone
+        }
+    }
 }
