@@ -16,7 +16,7 @@ final class MySubscribesView: UIView {
     
     // MARK: - Life Cycle
     
-    init(subscribes: [Subscribe]) {
+    init(subscribes: Subscribes) {
         tableView = MySubscribesTableView(subscribes: subscribes)
         super.init(frame: .zero)
         setupView()

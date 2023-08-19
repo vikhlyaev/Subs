@@ -22,11 +22,11 @@ final class MySubscribesTableView: UIView {
     
     // MARK: - Properties
     
-    private let subscribes: [Subscribe]
+    private let subscribes: Subscribes
     
     // MARK: - Life Cycle
     
-    init(subscribes: [Subscribe]) {
+    init(subscribes: Subscribes) {
         self.subscribes = subscribes
         super.init(frame: .zero)
         setupView()
@@ -56,7 +56,7 @@ extension MySubscribesTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SubscribeCell = tableView.dequeueReusableCell()
         let subscribe = subscribes[indexPath.row]
-        cell.configure(with: SubscribeCellViewModel.convert(subscribe: subscribe))
+        cell.configure(with: SubscribeCellViewModel(subscribe: subscribe))
         return cell
     }
 }

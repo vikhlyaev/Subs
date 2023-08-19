@@ -19,7 +19,7 @@ final class SubscribeCell: UITableViewCell, ReuseIdentifying {
         static let reminderIconImage = UIImage(systemName: "bell")
         static let paddingYConstraintsConst: CGFloat = 20
         static let paddingXConstraintsConst: CGFloat = 16
-        static let spacingYConstraintsConst: CGFloat = 2
+        static let spacingYConstraintsConst: CGFloat = 4
         static let spacingXConstraintsConst: CGFloat = 8
     }
     

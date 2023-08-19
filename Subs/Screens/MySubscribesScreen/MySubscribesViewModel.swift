@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MySubscribesOutput {
-    var subscribes: [Subscribe] { get }
+    var subscribes: Subscribes { get }
     func viewIsReady()
 }
 
@@ -19,7 +19,7 @@ final class MySubscribesViewModel {
 // MARK: - MySubscribesOutput
 
 extension MySubscribesViewModel: MySubscribesOutput {
-    var subscribes: [Subscribe] {
+    var subscribes: Subscribes {
         [
             Subscribe(
                 title: "Яндекс Плюс",
