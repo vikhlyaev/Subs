@@ -13,3 +13,6 @@
 "mySubscribes.searchPlaceholderText"="Поиск";
 "subscribeCell.paymentLabelText"="Оплата";
 "subscribeCell.reminderLabelText"="Напоминание";
+"frequency.oncePerWeek"="Раз в неделю";
+"frequency.oncePerMonth"="Раз в месяц";
+"frequency.oncePerYear"="Раз в год";

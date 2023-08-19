@@ -13,3 +13,6 @@
 "mySubscribes.searchPlaceholderText"="Search";
 "subscribeCell.paymentLabelText"="Payment";
 "subscribeCell.reminderLabelText"="Reminder";
+"frequency.oncePerWeek"="Once per week";
+"frequency.oncePerMonth"="Once per month";
+"frequency.oncePerYear"="Once per year";
