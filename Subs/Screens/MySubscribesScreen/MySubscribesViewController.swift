@@ -17,6 +17,16 @@ final class MySubscribesViewController: UIViewController {
         static let searchPlaceholderText = Localization.mySubscribesSearchPlaceholderText
     }
     
+    // MARK: - UI
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(SubscribeCell.self)
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
+    
     // MARK: - Properties
     
     private let viewModel: MySubscribesOutput
@@ -32,17 +42,14 @@ final class MySubscribesViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        view = MySubscribesView(subscribes: viewModel.subscribes)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
+        setupView()
         viewModel.viewIsReady()
     }
     
-    // MARK: - UI
+    // MARK: - Setup UI
     
     private func setupNavigationController() {
         let sortBarButton = UIBarButtonItem(
@@ -73,6 +80,15 @@ final class MySubscribesViewController: UIViewController {
         navigationItem.searchController = searchController
     }
     
+    private func setupView() {
+        view.backgroundColor = .systemBackground
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
     // MARK: - Actions
     
     @objc
@@ -85,6 +101,40 @@ final class MySubscribesViewController: UIViewController {
         print(#function)
     }
 }
+
+// MARK: - UITableViewDataSource
+
+extension MySubscribesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRowsInSection()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: SubscribeCell = tableView.dequeueReusableCell()
+        cell.configure(with: viewModel.viewModelForRow(at: indexPath))
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension MySubscribesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("delete")
+        }
+    }
+}
+
+// MARK: - UISearchBarDelegate
 
 extension MySubscribesViewController: UISearchBarDelegate {
     
