@@ -14,3 +14,5 @@ struct Subscribe {
     let frequency: Frequency
     let reminder: Reminder
 }
+
+typealias Subscribes = [Subscribe]
