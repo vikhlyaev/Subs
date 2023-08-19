@@ -16,3 +16,9 @@
 "frequency.oncePerWeek"="Раз в неделю";
 "frequency.oncePerMonth"="Раз в месяц";
 "frequency.oncePerYear"="Раз в год";
+"reminder.dayOfPayment"="В день оплаты";
+"reminder.oneDay"="За 1 день";
+"reminder.threeDay"="За 3 дня";
+"reminder.oneWeek"="За 1 неделю";
+"reminder.twoWeek"="За 2 недели";
+"reminder.none"="Нет";

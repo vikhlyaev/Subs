@@ -16,3 +16,9 @@
 "frequency.oncePerWeek"="Once per week";
 "frequency.oncePerMonth"="Once per month";
 "frequency.oncePerYear"="Once per year";
+"reminder.dayOfPayment"="On the date of payment";
+"reminder.oneDay"="1 day before";
+"reminder.threeDay"="3 days before";
+"reminder.oneWeek"="1 week before";
+"reminder.twoWeek"="2 weeks before";
+"reminder.none"="None";
