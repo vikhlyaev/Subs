@@ -9,10 +9,10 @@ import Foundation
 
 struct Subscribe {
     let title: String
-    let cost: Double
-    let nextPayment: Date
-    let frequency: Frequency
-    let reminder: Reminder
+    let price: Double
+    let nextBillingDate: Date
+    let billingCycle: BillingCycle
+    let alert: Alert
 }
 
 typealias Subscribes = [Subscribe]

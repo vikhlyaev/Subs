@@ -28,23 +28,23 @@ struct SubscribeCellViewModel {
     // MARK: - Properties
     
     let title: String
-    let cost: String
-    let nextPayment: String
-    let reminder: String
+    let price: String
+    let nextBillingDate: String
+    let alert: String
     
     // MARK: - Life Cycle
     
-    init(title: String, cost: String, nextPayment: String, reminder: String) {
+    init(title: String, price: String, nextBillingDate: String, alert: String) {
         self.title = title
-        self.cost = cost
-        self.nextPayment = nextPayment
-        self.reminder = reminder
+        self.price = price
+        self.nextBillingDate = nextBillingDate
+        self.alert = alert
     }
     
     init(subscribe: Subscribe) {
         self.title = subscribe.title
-        self.cost = SubscribeCellViewModel.currencyFormatter.string(from: subscribe.cost as NSNumber) ?? ""
-        self.nextPayment = SubscribeCellViewModel.dateFormatter.string(from: subscribe.nextPayment)
-        self.reminder = subscribe.reminder.title
+        self.price = SubscribeCellViewModel.currencyFormatter.string(from: subscribe.price as NSNumber) ?? ""
+        self.nextBillingDate = SubscribeCellViewModel.dateFormatter.string(from: subscribe.nextBillingDate)
+        self.alert = subscribe.alert.title
     }
 }

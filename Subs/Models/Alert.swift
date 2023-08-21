@@ -1,5 +1,5 @@
 //
-//  Reminder.swift
+//  Alert.swift
 //  Subs
 //
 //  Created by Anton Vikhlyaev on 18.08.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Reminder: CaseIterable {
+enum Alert: CaseIterable {
     case dayOfPayment
     case oneDay
     case threeDay
@@ -18,17 +18,17 @@ enum Reminder: CaseIterable {
     var title: String {
         switch self {
         case .dayOfPayment:
-            return Localization.reminderDayOfPayment
+            return Localization.alertDayOfPayment
         case .oneDay:
-            return Localization.reminderOneDay
+            return Localization.alertOneDay
         case .threeDay:
-            return Localization.reminderThreeDay
+            return Localization.alertThreeDay
         case .oneWeek:
-            return Localization.reminderOneWeek
+            return Localization.alertOneWeek
         case .twoWeek:
-            return Localization.reminderTwoWeek
+            return Localization.alertTwoWeek
         case .none:
-            return Localization.reminderNone
+            return Localization.alertNone
         }
     }
 }
