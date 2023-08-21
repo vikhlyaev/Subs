@@ -15,7 +15,7 @@ protocol ScreenBuilder {
 
 final class ScreenBuilderImpl: ScreenBuilder {
     func createMySubscribesScreen() -> UIViewController {
-        let viewModel = MySubscribesViewModel()
+        let viewModel = MySubscribesViewModel(screenBuilder: self)
         let vc = MySubscribesViewController(viewModel: viewModel)
         return vc
     }
@@ -29,6 +29,7 @@ final class ScreenBuilderImpl: ScreenBuilder {
     func createNewSubscribeScreen() -> UIViewController {
         let viewModel = NewSubscribeViewModel()
         let vc = NewSubscribeViewController(viewModel: viewModel)
-        return vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
     }
 }

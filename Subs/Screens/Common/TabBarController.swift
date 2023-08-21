@@ -14,14 +14,16 @@ final class TabBarController: UITabBarController {
     private enum Tabs {
         case mySubscribes
         case settings
+        
         var title: String {
             switch self {
             case .mySubscribes:
-                return Localization.tabBarMySubscribesText
+                return Localization.mySubscribesTitleText
             case .settings:
-                return Localization.tabBarSettingsText
+                return Localization.settingsTitleText
             }
         }
+        
         var imageName: String {
             switch self {
             case .mySubscribes:
@@ -66,6 +68,7 @@ final class TabBarController: UITabBarController {
     
     private func setupTabItems() {
         let tabs: [Tabs] = [.mySubscribes, .settings]
+        
         viewControllers = tabs.map {
             switch $0 {
             case .mySubscribes:
@@ -78,6 +81,7 @@ final class TabBarController: UITabBarController {
                 return wrapInNavigationController(viewController)
             }
         }
+        
         viewControllers?.enumerated().forEach {
             $1.title = tabs[$0].title
             $1.tabBarItem.title = tabs[$0].title

@@ -6,16 +6,25 @@
   
 */
 
-"tabBar.mySubscribesText"="Мои подписки";
-"tabBar.settingsText"="Настройки";
+// MySubscribes screen
+"mySubscribes.titleText"="Мои подписки";
 "mySubscribes.sortBarButtonText"="Сортировка";
 "mySubscribes.addBarButtonText"="Добавить";
 "mySubscribes.searchPlaceholderText"="Поиск";
+// Subscribe cell
 "subscribeCell.paymentLabelText"="Оплата";
 "subscribeCell.reminderLabelText"="Напоминание";
+// Settings screen
+"settings.titleText"="Настройки";
+// NewSubscribe screen
+"newSubscribe.titleText"="Новая подписка";
+"newSubscribe.cancelBarButtonText"="Отмена";
+"newSubscribe.saveBarButtonText"="Сохранить";
+// Frequency
 "frequency.oncePerWeek"="Раз в неделю";
 "frequency.oncePerMonth"="Раз в месяц";
 "frequency.oncePerYear"="Раз в год";
+// Reminder
 "reminder.dayOfPayment"="В день оплаты";
 "reminder.oneDay"="За 1 день";
 "reminder.threeDay"="За 3 дня";

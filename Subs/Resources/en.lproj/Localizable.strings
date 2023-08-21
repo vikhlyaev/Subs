@@ -6,16 +6,25 @@
   
 */
 
-"tabBar.mySubscribesText"="My subscribes";
-"tabBar.settingsText"="Settings";
+// MySubscribes screen
+"mySubscribes.titleText"="My subscribes";
 "mySubscribes.sortBarButtonText"="Sorting";
 "mySubscribes.addBarButtonText"="Add";
 "mySubscribes.searchPlaceholderText"="Search";
+// Subscribe cell
 "subscribeCell.paymentLabelText"="Payment";
 "subscribeCell.reminderLabelText"="Reminder";
+// Settings screen
+"settings.titleText"="Settings";
+// NewSubscribe screen
+"newSubscribe.titleText"="New subscribe";
+"newSubscribe.cancelBarButtonText"="Cancel";
+"newSubscribe.saveBarButtonText"="Save";
+// Frequency
 "frequency.oncePerWeek"="Once per week";
 "frequency.oncePerMonth"="Once per month";
 "frequency.oncePerYear"="Once per year";
+// Reminder
 "reminder.dayOfPayment"="On the date of payment";
 "reminder.oneDay"="1 day before";
 "reminder.threeDay"="3 days before";
