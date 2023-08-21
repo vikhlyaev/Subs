@@ -9,6 +9,14 @@ import UIKit
 
 final class NewSubscribeViewController: UIViewController {
     
+    // MARK: - Constants
+    
+    private enum Constants {
+        static let titleText = Localization.newSubscribeTitleText
+        static let cancelBarButtonText = Localization.newSubscribeCancelBarButtonText
+        static let saveBarButtonText = Localization.newSubscribeSaveBarButtonText
+    }
+    
     // MARK: - Properties
     
     private let viewModel: NewSubscribeOutput
@@ -24,12 +32,49 @@ final class NewSubscribeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        view = NewSubscribeView()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationController()
+        setupView()
         viewModel.viewIsReady()
+    }
+    
+    // MARK: - Setup UI
+    
+    private func setupNavigationController() {
+        let cancelBarButton = UIBarButtonItem(
+            title: Constants.cancelBarButtonText,
+            style: .plain,
+            target: self,
+            action: #selector(cancelBarButtonTapped)
+        )
+        
+        let saveBarButton = UIBarButtonItem(
+            title: Constants.saveBarButtonText,
+            style: .done,
+            target: self,
+            action: #selector(saveBarButtonTapped)
+        )
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.leftBarButtonItem = cancelBarButton
+        navigationItem.rightBarButtonItem = saveBarButton
+        navigationItem.title = Constants.titleText
+    }
+    
+    private func setupView() {
+        view.backgroundColor = .systemBackground
+    }
+    
+    // MARK: - Actions
+    
+    @objc
+    private func cancelBarButtonTapped() {
+        dismiss(animated: true)
+    }
+    
+    @objc
+    private func saveBarButtonTapped() {
+        print(#function)
     }
 }
