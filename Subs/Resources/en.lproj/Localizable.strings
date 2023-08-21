@@ -13,21 +13,30 @@
 "mySubscribes.searchPlaceholderText"="Search";
 // Subscribe cell
 "subscribeCell.paymentLabelText"="Payment";
-"subscribeCell.reminderLabelText"="Reminder";
+"subscribeCell.alertLabelText"="Alert";
 // Settings screen
 "settings.titleText"="Settings";
 // NewSubscribe screen
 "newSubscribe.titleText"="New subscribe";
 "newSubscribe.cancelBarButtonText"="Cancel";
 "newSubscribe.saveBarButtonText"="Save";
-// Frequency
-"frequency.oncePerWeek"="Once per week";
-"frequency.oncePerMonth"="Once per month";
-"frequency.oncePerYear"="Once per year";
-// Reminder
-"reminder.dayOfPayment"="On the date of payment";
-"reminder.oneDay"="1 day before";
-"reminder.threeDay"="3 days before";
-"reminder.oneWeek"="1 week before";
-"reminder.twoWeek"="2 weeks before";
-"reminder.none"="None";
+// Billing Cycle
+"billingCycle.titleText"="Billing Cycle";
+"billingCycle.weekly"="Weekly";
+"billingCycle.monthly"="Monthly";
+"billingCycle.yearly"="Yearly";
+// Alert
+"alert.titleText"="Alert";
+"alert.dayOfPayment"="On the date of payment";
+"alert.oneDay"="1 day before";
+"alert.threeDay"="3 days before";
+"alert.oneWeek"="1 week before";
+"alert.twoWeek"="2 weeks before";
+"alert.none"="None";
+"alert.cancelBarButtonText"="Cancel";
+// Parameters
+"parameters.titleText"="Name";
+"parameters.priceText"="Price";
+"parameters.nextBillingDateText"="Next Billing Date";
+"parameters.billingCycleText"="Billing Cycle";
+"parameters.alertText"="Alert";

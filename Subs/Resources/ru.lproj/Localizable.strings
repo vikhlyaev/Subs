@@ -13,21 +13,32 @@
 "mySubscribes.searchPlaceholderText"="Поиск";
 // Subscribe cell
 "subscribeCell.paymentLabelText"="Оплата";
-"subscribeCell.reminderLabelText"="Напоминание";
+"subscribeCell.alertLabelText"="Напоминание";
 // Settings screen
 "settings.titleText"="Настройки";
 // NewSubscribe screen
 "newSubscribe.titleText"="Новая подписка";
 "newSubscribe.cancelBarButtonText"="Отмена";
 "newSubscribe.saveBarButtonText"="Сохранить";
-// Frequency
-"frequency.oncePerWeek"="Раз в неделю";
-"frequency.oncePerMonth"="Раз в месяц";
-"frequency.oncePerYear"="Раз в год";
-// Reminder
-"reminder.dayOfPayment"="В день оплаты";
-"reminder.oneDay"="За 1 день";
-"reminder.threeDay"="За 3 дня";
-"reminder.oneWeek"="За 1 неделю";
-"reminder.twoWeek"="За 2 недели";
-"reminder.none"="Нет";
+// Billing Cycle
+"billingCycle.titleText"="Периодичность";
+"billingCycle.weekly"="Раз в неделю";
+"billingCycle.monthly"="Раз в месяц";
+"billingCycle.yearly"="Раз в год";
+// Alert
+"alert.titleText"="Напоминание";
+"alert.dayOfPayment"="В день оплаты";
+"alert.oneDay"="За 1 день";
+"alert.threeDay"="За 3 дня";
+"alert.oneWeek"="За 1 неделю";
+"alert.twoWeek"="За 2 недели";
+"alert.none"="Нет";
+"alert.cancelBarButtonText"="Отмена";
+// Parameters
+"parameters.titleText"="Название";
+"parameters.priceText"="Стоимость подписки";
+"parameters.nextBillingDateText"="Следующая оплата";
+"parameters.billingCycleText"="Периодичность";
+"parameters.alertText"="Напоминание";
+
+
