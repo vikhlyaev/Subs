@@ -24,13 +24,20 @@ final class SettingsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        view = SettingsView()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationController()
+        setupView()
         viewModel.viewIsReady()
     }
     
+    // MARK: - Setup UI
+    
+    private func setupNavigationController() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setupView() {
+        view.backgroundColor = .systemBackground
+    }
 }

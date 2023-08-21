@@ -23,10 +23,8 @@
 		0A23D3AB2A8FB2F9009A6091 /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3AA2A8FB2F9009A6091 /* ScreenBuilder.swift */; };
 		0A23D3B02A8FB3F5009A6091 /* MySubscribesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3AF2A8FB3F5009A6091 /* MySubscribesViewModel.swift */; };
 		0A23D3B32A8FB5E6009A6091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3B22A8FB5E6009A6091 /* TabBarController.swift */; };
-		0A23D3B62A8FB69F009A6091 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3B52A8FB69F009A6091 /* SettingsView.swift */; };
 		0A23D3B82A8FB6AF009A6091 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3B72A8FB6AF009A6091 /* SettingsViewController.swift */; };
 		0A23D3BA2A8FB6BA009A6091 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3B92A8FB6BA009A6091 /* SettingsViewModel.swift */; };
-		0A23D3BD2A8FDD62009A6091 /* NewSubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3BC2A8FDD62009A6091 /* NewSubscribeView.swift */; };
 		0A23D3BF2A8FDD6A009A6091 /* NewSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3BE2A8FDD6A009A6091 /* NewSubscribeViewController.swift */; };
 		0A23D3C12A8FDD72009A6091 /* NewSubscribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3C02A8FDD72009A6091 /* NewSubscribeViewModel.swift */; };
 		0A23D3C82A8FE2B0009A6091 /* CellsReusingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3C72A8FE2B0009A6091 /* CellsReusingUtils.swift */; };
@@ -60,10 +58,8 @@
 		0A23D3AA2A8FB2F9009A6091 /* ScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
 		0A23D3AF2A8FB3F5009A6091 /* MySubscribesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscribesViewModel.swift; sourceTree = "<group>"; };
 		0A23D3B22A8FB5E6009A6091 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		0A23D3B52A8FB69F009A6091 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0A23D3B72A8FB6AF009A6091 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A23D3B92A8FB6BA009A6091 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		0A23D3BC2A8FDD62009A6091 /* NewSubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubscribeView.swift; sourceTree = "<group>"; };
 		0A23D3BE2A8FDD6A009A6091 /* NewSubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubscribeViewController.swift; sourceTree = "<group>"; };
 		0A23D3C02A8FDD72009A6091 /* NewSubscribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubscribeViewModel.swift; sourceTree = "<group>"; };
 		0A23D3C72A8FE2B0009A6091 /* CellsReusingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsReusingUtils.swift; sourceTree = "<group>"; };
@@ -215,7 +211,6 @@
 			children = (
 				0A23D3B72A8FB6AF009A6091 /* SettingsViewController.swift */,
 				0A23D3B92A8FB6BA009A6091 /* SettingsViewModel.swift */,
-				0A23D3B52A8FB69F009A6091 /* SettingsView.swift */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -225,7 +220,6 @@
 			children = (
 				0A23D3BE2A8FDD6A009A6091 /* NewSubscribeViewController.swift */,
 				0A23D3C02A8FDD72009A6091 /* NewSubscribeViewModel.swift */,
-				0A23D3BC2A8FDD62009A6091 /* NewSubscribeView.swift */,
 			);
 			path = NewSubscribeScreen;
 			sourceTree = "<group>";
@@ -469,13 +463,11 @@
 				0A23D3C82A8FE2B0009A6091 /* CellsReusingUtils.swift in Sources */,
 				0A23D3BF2A8FDD6A009A6091 /* NewSubscribeViewController.swift in Sources */,
 				0A23D3B82A8FB6AF009A6091 /* SettingsViewController.swift in Sources */,
-				0A23D3B62A8FB69F009A6091 /* SettingsView.swift in Sources */,
 				0A23D3AB2A8FB2F9009A6091 /* ScreenBuilder.swift in Sources */,
 				0A23D3772A8F82E7009A6091 /* AppDelegate.swift in Sources */,
 				0A23D3A72A8F892B009A6091 /* Localization.swift in Sources */,
 				0A23D3D72A8FF1A2009A6091 /* Reminder.swift in Sources */,
 				0A23D3D02A8FE4DE009A6091 /* SubscribeCellViewModel.swift in Sources */,
-				0A23D3BD2A8FDD62009A6091 /* NewSubscribeView.swift in Sources */,
 				0A23D3C12A8FDD72009A6091 /* NewSubscribeViewModel.swift in Sources */,
 				0A23D3BA2A8FB6BA009A6091 /* SettingsViewModel.swift in Sources */,
 				0A23D3CD2A8FE386009A6091 /* Font.swift in Sources */,
