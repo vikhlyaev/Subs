@@ -32,4 +32,11 @@ final class ScreenBuilderImpl: ScreenBuilder {
         let navigationController = UINavigationController(rootViewController: vc)
         return navigationController
     }
+    
+    func createAlertScreen() -> UIViewController {
+        let viewModel = AlertViewModel()
+        let vc = AlertViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
+    }
 }
