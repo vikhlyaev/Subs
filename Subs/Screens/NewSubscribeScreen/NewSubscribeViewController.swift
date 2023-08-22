@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewSubscribeViewController: UIViewController {
+final class NewSubscribeViewController: UITableViewController {
     
     // MARK: - Constants
     
@@ -25,7 +25,7 @@ final class NewSubscribeViewController: UIViewController {
     
     init(viewModel: NewSubscribeOutput) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .insetGrouped)
     }
     
     required init?(coder: NSCoder) {
@@ -63,7 +63,7 @@ final class NewSubscribeViewController: UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = .systemBackground
+        tableView.register(ParameterCell.self)
     }
     
     // MARK: - Actions
@@ -76,5 +76,36 @@ final class NewSubscribeViewController: UIViewController {
     @objc
     private func saveBarButtonTapped() {
         print(#function)
+    }
+    
+    // MARK: - UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        Parameters.allCases.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ParameterCell = tableView.dequeueReusableCell()
+        cell.configure(with: Parameters.allCases[indexPath.row])
+        cell.delegate = self
+        return cell
+    }
+}
+
+// MARK: - ParameterCellDelegate
+
+extension NewSubscribeViewController: ParameterCellDelegate {
+    func didTapAlertButton() {
+        let viewModel = AlertViewModel()
+        let vc = AlertViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true)
+    }
+    
+    func didTapBillingCycleButton() {
+        let viewModel = BillingCycleViewModel()
+        let vc = BillingCycleViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true)
     }
 }

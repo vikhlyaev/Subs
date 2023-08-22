@@ -32,8 +32,16 @@
 		0A23D3CD2A8FE386009A6091 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3CC2A8FE386009A6091 /* Font.swift */; };
 		0A23D3D02A8FE4DE009A6091 /* SubscribeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3CF2A8FE4DE009A6091 /* SubscribeCellViewModel.swift */; };
 		0A23D3D32A8FF167009A6091 /* Subscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3D22A8FF167009A6091 /* Subscribe.swift */; };
-		0A23D3D52A8FF185009A6091 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3D42A8FF185009A6091 /* Frequency.swift */; };
-		0A23D3D72A8FF1A2009A6091 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3D62A8FF1A2009A6091 /* Reminder.swift */; };
+		0A23D3D52A8FF185009A6091 /* BillingCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3D42A8FF185009A6091 /* BillingCycle.swift */; };
+		0A23D3D72A8FF1A2009A6091 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23D3D62A8FF1A2009A6091 /* Alert.swift */; };
+		0A749C4D2A93241300CED476 /* ParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C4C2A93241300CED476 /* ParameterCell.swift */; };
+		0A749C522A93713400CED476 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C512A93713400CED476 /* AlertViewController.swift */; };
+		0A749C542A93713C00CED476 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C532A93713C00CED476 /* AlertViewModel.swift */; };
+		0A749C582A937D1100CED476 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C572A937D1100CED476 /* Parameters.swift */; };
+		0A749C5A2A939DD400CED476 /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C592A939DD400CED476 /* AlertCell.swift */; };
+		0A749C5E2A93CE6B00CED476 /* BillingCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C5D2A93CE6B00CED476 /* BillingCycleViewController.swift */; };
+		0A749C602A93CE7300CED476 /* BillingCycleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C5F2A93CE7300CED476 /* BillingCycleViewModel.swift */; };
+		0A749C622A93CE7E00CED476 /* BillingCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A749C612A93CE7E00CED476 /* BillingCycleCell.swift */; };
 		894085A7449B554D3B4B17F9 /* Pods_Subs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D626D48B9D469428F39874 /* Pods_Subs.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +75,16 @@
 		0A23D3CC2A8FE386009A6091 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0A23D3CF2A8FE4DE009A6091 /* SubscribeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeCellViewModel.swift; sourceTree = "<group>"; };
 		0A23D3D22A8FF167009A6091 /* Subscribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscribe.swift; sourceTree = "<group>"; };
-		0A23D3D42A8FF185009A6091 /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
-		0A23D3D62A8FF1A2009A6091 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		0A23D3D42A8FF185009A6091 /* BillingCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycle.swift; sourceTree = "<group>"; };
+		0A23D3D62A8FF1A2009A6091 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		0A749C4C2A93241300CED476 /* ParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCell.swift; sourceTree = "<group>"; };
+		0A749C512A93713400CED476 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		0A749C532A93713C00CED476 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		0A749C572A937D1100CED476 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		0A749C592A939DD400CED476 /* AlertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
+		0A749C5D2A93CE6B00CED476 /* BillingCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycleViewController.swift; sourceTree = "<group>"; };
+		0A749C5F2A93CE7300CED476 /* BillingCycleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycleViewModel.swift; sourceTree = "<group>"; };
+		0A749C612A93CE7E00CED476 /* BillingCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycleCell.swift; sourceTree = "<group>"; };
 		51C83E0221C825A041FD268C /* Pods-Subs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subs.debug.xcconfig"; path = "Target Support Files/Pods-Subs/Pods-Subs.debug.xcconfig"; sourceTree = "<group>"; };
 		D3D626D48B9D469428F39874 /* Pods_Subs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +149,8 @@
 				0A23D3B12A8FB5C8009A6091 /* Common */,
 				0A23D3AC2A8FB3B2009A6091 /* MySubscribesScreen */,
 				0A23D3BB2A8FDD3F009A6091 /* NewSubscribeScreen */,
+				0A749C502A93710200CED476 /* AlertScreen */,
+				0A749C5C2A93CE4200CED476 /* BillingCycleScreen */,
 				0A23D3B42A8FB682009A6091 /* SettingsScreen */,
 			);
 			path = Screens;
@@ -218,6 +236,7 @@
 		0A23D3BB2A8FDD3F009A6091 /* NewSubscribeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				0A749C4B2A93240700CED476 /* Views */,
 				0A23D3BE2A8FDD6A009A6091 /* NewSubscribeViewController.swift */,
 				0A23D3C02A8FDD72009A6091 /* NewSubscribeViewModel.swift */,
 			);
@@ -253,8 +272,9 @@
 			children = (
 				0A23D3D12A8FF14C009A6091 /* ViewModels */,
 				0A23D3D22A8FF167009A6091 /* Subscribe.swift */,
-				0A23D3D42A8FF185009A6091 /* Frequency.swift */,
-				0A23D3D62A8FF1A2009A6091 /* Reminder.swift */,
+				0A23D3D42A8FF185009A6091 /* BillingCycle.swift */,
+				0A23D3D62A8FF1A2009A6091 /* Alert.swift */,
+				0A749C572A937D1100CED476 /* Parameters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +285,50 @@
 				0A23D3CF2A8FE4DE009A6091 /* SubscribeCellViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0A749C4B2A93240700CED476 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A749C4C2A93241300CED476 /* ParameterCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A749C502A93710200CED476 /* AlertScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0A749C5B2A939DD900CED476 /* Views */,
+				0A749C512A93713400CED476 /* AlertViewController.swift */,
+				0A749C532A93713C00CED476 /* AlertViewModel.swift */,
+			);
+			path = AlertScreen;
+			sourceTree = "<group>";
+		};
+		0A749C5B2A939DD900CED476 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A749C592A939DD400CED476 /* AlertCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A749C5C2A93CE4200CED476 /* BillingCycleScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0A749C632A93CE8500CED476 /* Views */,
+				0A749C5D2A93CE6B00CED476 /* BillingCycleViewController.swift */,
+				0A749C5F2A93CE7300CED476 /* BillingCycleViewModel.swift */,
+			);
+			path = BillingCycleScreen;
+			sourceTree = "<group>";
+		};
+		0A749C632A93CE8500CED476 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A749C612A93CE7E00CED476 /* BillingCycleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2105ACC89984F9EA992C89B9 /* Frameworks */ = {
@@ -454,24 +518,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A23D3D52A8FF185009A6091 /* Frequency.swift in Sources */,
+				0A23D3D52A8FF185009A6091 /* BillingCycle.swift in Sources */,
 				0A23D3D32A8FF167009A6091 /* Subscribe.swift in Sources */,
+				0A749C522A93713400CED476 /* AlertViewController.swift in Sources */,
 				0A23D37B2A8F82E7009A6091 /* MySubscribesViewController.swift in Sources */,
 				0A23D3B32A8FB5E6009A6091 /* TabBarController.swift in Sources */,
 				0A23D3CB2A8FE2E3009A6091 /* SubscribeCell.swift in Sources */,
+				0A749C602A93CE7300CED476 /* BillingCycleViewModel.swift in Sources */,
 				0A23D3A82A8F892B009A6091 /* Image.swift in Sources */,
+				0A749C622A93CE7E00CED476 /* BillingCycleCell.swift in Sources */,
 				0A23D3C82A8FE2B0009A6091 /* CellsReusingUtils.swift in Sources */,
 				0A23D3BF2A8FDD6A009A6091 /* NewSubscribeViewController.swift in Sources */,
+				0A749C5E2A93CE6B00CED476 /* BillingCycleViewController.swift in Sources */,
+				0A749C542A93713C00CED476 /* AlertViewModel.swift in Sources */,
 				0A23D3B82A8FB6AF009A6091 /* SettingsViewController.swift in Sources */,
 				0A23D3AB2A8FB2F9009A6091 /* ScreenBuilder.swift in Sources */,
 				0A23D3772A8F82E7009A6091 /* AppDelegate.swift in Sources */,
 				0A23D3A72A8F892B009A6091 /* Localization.swift in Sources */,
-				0A23D3D72A8FF1A2009A6091 /* Reminder.swift in Sources */,
+				0A749C4D2A93241300CED476 /* ParameterCell.swift in Sources */,
+				0A23D3D72A8FF1A2009A6091 /* Alert.swift in Sources */,
 				0A23D3D02A8FE4DE009A6091 /* SubscribeCellViewModel.swift in Sources */,
 				0A23D3C12A8FDD72009A6091 /* NewSubscribeViewModel.swift in Sources */,
 				0A23D3BA2A8FB6BA009A6091 /* SettingsViewModel.swift in Sources */,
+				0A749C5A2A939DD400CED476 /* AlertCell.swift in Sources */,
 				0A23D3CD2A8FE386009A6091 /* Font.swift in Sources */,
 				0A23D3B02A8FB3F5009A6091 /* MySubscribesViewModel.swift in Sources */,
+				0A749C582A937D1100CED476 /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
