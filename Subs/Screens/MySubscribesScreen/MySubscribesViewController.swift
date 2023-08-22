@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MySubscribesViewController: UIViewController {
+final class MySubscribesViewController: UITableViewController {
     
     // MARK: - Constants
     
@@ -17,16 +17,6 @@ final class MySubscribesViewController: UIViewController {
         static let searchPlaceholderText = Localization.mySubscribesSearchPlaceholderText
     }
     
-    // MARK: - UI
-    
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(SubscribeCell.self)
-        tableView.delegate = self
-        tableView.dataSource = self
-        return tableView
-    }()
-    
     // MARK: - Properties
     
     private let viewModel: MySubscribesOutput
@@ -35,7 +25,7 @@ final class MySubscribesViewController: UIViewController {
     
     init(viewModel: MySubscribesOutput) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .insetGrouped)
     }
     
     required init?(coder: NSCoder) {
@@ -61,7 +51,7 @@ final class MySubscribesViewController: UIViewController {
         
         let addBarButton = UIBarButtonItem(
             title: Constants.addBarButtonText,
-            style: .plain,
+            style: .done,
             target: self,
             action: #selector(addBarButtonTapped)
         )
@@ -81,12 +71,7 @@ final class MySubscribesViewController: UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = .systemBackground
-        
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        tableView.register(SubscribeCell.self)
     }
     
     // MARK: - Actions
@@ -98,36 +83,35 @@ final class MySubscribesViewController: UIViewController {
     
     @objc
     private func addBarButtonTapped() {
-        print(#function)
-    }
-}
-
-// MARK: - UITableViewDataSource
-
-extension MySubscribesViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRowsInSection()
+        let viewModel = self.viewModel.viewModelForNewSubscribe()
+        let vc = NewSubscribeViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    // MARK: - UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRows()
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SubscribeCell = tableView.dequeueReusableCell()
         cell.configure(with: viewModel.viewModelForRow(at: indexPath))
         return cell
     }
-}
-
-// MARK: - UITableViewDelegate
-
-extension MySubscribesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("delete")
         }

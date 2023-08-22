@@ -14,9 +14,9 @@ final class SubscribeCell: UITableViewCell, ReuseIdentifying {
     
     private enum Constants {
         static let paymentLabelText = Localization.subscribeCellPaymentLabelText
-        static let reminderLabelText = Localization.subscribeCellReminderLabelText
+        static let alertLabelText = Localization.subscribeCellAlertLabelText
         static let paymentIconImage = UIImage(systemName: "clock")
-        static let reminderIconImage = UIImage(systemName: "bell")
+        static let alertIconImage = UIImage(systemName: "bell")
         static let paddingYConstraintsConst: CGFloat = 20
         static let paddingXConstraintsConst: CGFloat = 16
         static let spacingYConstraintsConst: CGFloat = 4
@@ -52,15 +52,15 @@ final class SubscribeCell: UITableViewCell, ReuseIdentifying {
         return label
     }()
     
-    private lazy var reminderImageView: UIImageView = {
+    private lazy var alertImageView: UIImageView = {
         let imageView = UIImageView()
         var configuration = UIImage.SymbolConfiguration(paletteColors: [.systemGray])
         configuration = configuration.applying(UIImage.SymbolConfiguration(pointSize: 13))
-        imageView.image = Constants.reminderIconImage?.withConfiguration(configuration)
+        imageView.image = Constants.alertIconImage?.withConfiguration(configuration)
         return imageView
     }()
     
-    private lazy var reminderLabel: UILabel = {
+    private lazy var alertLabel: UILabel = {
         let label = UILabel()
         label.font = .regular15
         label.textColor = .systemGray
@@ -81,13 +81,18 @@ final class SubscribeCell: UITableViewCell, ReuseIdentifying {
     // MARK: - Setup UI
     
     private func setupView() {
-        separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        separatorInset = UIEdgeInsets(
+            top: 0,
+            left: Constants.paddingXConstraintsConst,
+            bottom: 0,
+            right: Constants.paddingXConstraintsConst
+        )
         contentView.addSubview(titleLabel)
         contentView.addSubview(costLabel)
         contentView.addSubview(paymentImageView)
         contentView.addSubview(paymentLabel)
-        contentView.addSubview(reminderImageView)
-        contentView.addSubview(reminderLabel)
+        contentView.addSubview(alertImageView)
+        contentView.addSubview(alertLabel)
         setConstraints()
     }
     
@@ -95,9 +100,9 @@ final class SubscribeCell: UITableViewCell, ReuseIdentifying {
     
     func configure(with model: SubscribeCellViewModel) {
         titleLabel.text = model.title
-        costLabel.text = model.cost
-        paymentLabel.text = [Constants.paymentLabelText, model.nextPayment].joined(separator: "・")
-        reminderLabel.text = [Constants.reminderLabelText, model.reminder].joined(separator: "・")
+        costLabel.text = model.price
+        paymentLabel.text = [Constants.paymentLabelText, model.nextBillingDate].joined(separator: "・")
+        alertLabel.text = [Constants.alertLabelText, model.alert].joined(separator: "・")
     }
 }
 
@@ -126,14 +131,14 @@ extension SubscribeCell {
             make.leading.equalTo(paymentImageView.snp.trailing).inset(-Constants.spacingYConstraintsConst)
         }
         
-        reminderImageView.snp.makeConstraints { make in
+        alertImageView.snp.makeConstraints { make in
             make.leading.equalTo(contentView).inset(Constants.paddingYConstraintsConst)
-            make.centerY.equalTo(reminderLabel)
+            make.centerY.equalTo(alertLabel)
         }
         
-        reminderLabel.snp.makeConstraints { make in
+        alertLabel.snp.makeConstraints { make in
             make.top.equalTo(paymentLabel.snp.bottom).inset(-Constants.spacingYConstraintsConst)
-            make.leading.equalTo(reminderImageView.snp.trailing).inset(-Constants.spacingYConstraintsConst)
+            make.leading.equalTo(alertImageView.snp.trailing).inset(-Constants.spacingYConstraintsConst)
             make.bottom.equalTo(contentView).inset(Constants.paddingYConstraintsConst)
         }
     }
